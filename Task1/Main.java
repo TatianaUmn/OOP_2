@@ -10,18 +10,18 @@ public class Main {
         Person jane = new Person("Женя", 2);
         Person ivan = new Person("Ваня", 5);
         GeoTree gt = new GeoTree();
-        gt.appendPatent(irina, vasya);
-        gt.appendPatent(irina, masha);
-        gt.appendPatent(mark, vasya);
-        gt.appendPatent(mark, masha);
-        gt.appendPatent(vasya, jane);
-        gt.appendPatent(vasya, ivan);
-        gt.appendPatent(katya, jane);
-        gt.appendPatent(katya, ivan);
-        gt.appendBrother(ivan, jane);
-        gt.appendBrother(vasya, masha);
-        gt.appendWife(mark, irina);
-        gt.appendWife(vasya, katya);
+        gt.appendUni(irina, Relationship.parent, vasya, Relationship.children);
+        gt.appendUni(irina, Relationship.parent, masha, Relationship.children);
+        gt.appendUni(mark, Relationship.parent, vasya, Relationship.children);
+        gt.appendUni(mark, Relationship.parent, masha, Relationship.children);
+        gt.appendUni(vasya, Relationship.parent, jane, Relationship.children);
+        gt.appendUni(vasya, Relationship.parent, ivan, Relationship.children);
+        gt.appendUni(katya, Relationship.parent, jane, Relationship.children);
+        gt.appendUni(katya, Relationship.parent, ivan, Relationship.children);
+        gt.appendUni(ivan, Relationship.brother, jane, Relationship.sister);
+        gt.appendUni(vasya, Relationship.brother, masha, Relationship.sister);
+        gt.appendUni(mark, Relationship.husband, irina, Relationship.wife);
+        gt.appendUni(vasya, Relationship.husband, katya, Relationship.wife);
 
         Reserch newReserch = new Reserch(gt);
 
