@@ -3,8 +3,8 @@ package Task3;
 public class Cat extends Animal implements Action{
     
 
-    public Cat(String name, boolean hungry) {
-        super(name, hungry);
+    public Cat(String name, boolean hungry, int age) {
+        super(name, hungry, age);
     }
 
     

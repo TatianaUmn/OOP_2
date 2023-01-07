@@ -2,8 +2,20 @@ package Task3;
 
 public class Dog extends Animal implements Action{
 
-    public Dog(String name, boolean hungry) {
-        super(name, hungry);
+    private int height;
+
+    public Dog(String name, boolean hungry, int age, int height) {
+        super(name, hungry, age);
+        this.height = height;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+
     }
 
     
